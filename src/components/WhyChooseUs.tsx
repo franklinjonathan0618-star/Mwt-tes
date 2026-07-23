@@ -101,8 +101,8 @@ export default function WhyChooseUs() {
           </div>
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
-            gap: "32px"
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+            gap: "24px"
           }}>
             {cardsData.map((value, i) => {
               const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {

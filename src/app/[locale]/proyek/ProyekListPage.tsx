@@ -139,8 +139,8 @@ export default function ProyekPage() {
 
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "32px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+            gap: "24px",
           }}>
             {translatedCategories.map((cat) => (
               <CategoryCard key={cat.slug} category={cat} projectCount={allProjects.filter(p => p.category.toLowerCase() === cat.slug).length} />

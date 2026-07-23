@@ -19,14 +19,14 @@ export default function AboutSection() {
         <div ref={ref} style={{ maxWidth: "1280px", margin: "0 auto" }}>
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
-            gap: "64px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
+            gap: "40px",
             alignItems: "center"
           }}>
             {/* Text Profile */}
             <div className={`reveal reveal-left ${isInView ? "visible" : ""}`}>
               <h2 style={{
-                fontSize: "clamp(34px, 5vw, 44px)",
+                fontSize: "clamp(28px, 5vw, 44px)",
                 fontWeight: 800,
                 color: BLUE,
                 textTransform: "uppercase",
@@ -37,7 +37,7 @@ export default function AboutSection() {
               }}>
                 {t("title")}
               </h2>
-              <div style={{ color: "#6B7280", fontSize: "17px", lineHeight: "1.8", display: "flex", flexDirection: "column", gap: "20px", textAlign: "justify" }}>
+              <div style={{ color: "#6B7280", fontSize: "16px", lineHeight: "1.8", display: "flex", flexDirection: "column", gap: "20px", textAlign: "justify" }}>
                 <p>
                   {t("paragraph1")}
                 </p>
@@ -53,8 +53,8 @@ export default function AboutSection() {
             {/* Stats Grid */}
             <div className={`reveal reveal-right reveal-delay-2 ${isInView ? "visible" : ""}`} style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "24px"
+              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 140px), 1fr))",
+              gap: "16px"
             }}>
               {/* Stat 1 */}
               <div style={{

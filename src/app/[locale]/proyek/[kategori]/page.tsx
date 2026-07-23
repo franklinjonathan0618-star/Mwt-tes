@@ -159,8 +159,8 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
 
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
-            gap: "28px",
+            gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 280px), 1fr))",
+            gap: "24px",
           }}>
             {projects.map((project, idx) => (
               <RevealSection key={project.id} variant="up" delay={idx + 1} style={{ display: "flex", flexDirection: "column" }}>

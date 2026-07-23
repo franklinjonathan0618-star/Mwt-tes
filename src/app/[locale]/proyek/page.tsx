@@ -166,8 +166,8 @@ export default function ProyekPage() {
 
           <div style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "32px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+            gap: "24px",
           }}>
             {translatedCategories.map((cat, idx) => (
               <RevealSection key={cat.slug} variant="up" delay={idx + 1} style={{ display: "flex", flexDirection: "column" }}>
