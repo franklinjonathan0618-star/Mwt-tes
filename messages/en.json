@@ -1,0 +1,192 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "about": "About Us",
+    "projects": "Projects",
+    "contact": "Contact Us"
+  },
+  "Footer": {
+    "tagline": "Reliable and Trustworthy Partner",
+    "description": "National construction services company established in 1979, with over 40 years of experience in Building, Infrastructure, Industrial, and Utility projects throughout Indonesia.",
+    "menu": "Menu",
+    "menuHome": "Home",
+    "menuAbout": "About Us",
+    "menuProjects": "Projects",
+    "menuContact": "Contact Us",
+    "contact": "Contact",
+    "location": "Our Location",
+    "copyright": "PT Modern Widya Tehnical. All Rights Reserved."
+  },
+  "Hero": {
+    "title": "PT MODERN WIDYA TEHNICAL",
+    "subtitle": "Infrastructure Division",
+    "description": "National Construction Services Company Since 1979. With over 40 years of experience handling Building, Industrial, Infrastructure, and Utility projects throughout Indonesia with international standards and professional teams. We are committed to being a <bold>RELIABLE and TRUSTWORTHY</bold> partner.",
+    "ctaProjects": "View Our Projects",
+    "ctaContact": "Contact Us"
+  },
+  "About": {
+    "title": "COMPANY PROFILE",
+    "paragraph1": "Based on Notarial Deed No. 75 dated June 24, 2021, and the Decision of the Minister of Law and Human Rights of the Republic of Indonesia No. AHU-0002735.AH.01.01 of 2021 regarding the appointment of Mr. Ir. RIADI as Head of the Infrastructure Division of PT Modern Widya Tehnical.",
+    "paragraph2": "PT Modern Widya Tehnical is a national construction services company established in 1979, with over 40 years of experience handling various Building, Industrial, Infrastructure, and Utility Projects throughout Indonesia. Supported by international standards and professional teams, we are committed to being a RELIABLE and TRUSTWORTHY partner.",
+    "paragraph3": "Entering more than 40 years of service, we have handled various areas of construction services, including the construction of buildings, commercial areas, housing, industrial facilities, road and bridge infrastructure, water works, ports, power plants, to design and build projects. Our works are spread across almost all regions of Indonesia, from Sumatra to Papua.",
+    "statExperience": "Years of Experience",
+    "statProjects": "Completed Projects",
+    "statSafety": "HSE / Safety Standards",
+    "statProvinces": "Operational Provinces"
+  },
+  "VisiMisi": {
+    "title": "VISION & MISSION",
+    "subtitle": "Our Strategic Direction and Commitment",
+    "visionTitle": "Vision",
+    "visionText": "To be a reliable and trustworthy construction company in completing construction projects on time, with the right quality, within budget, with orderly administration, and safely, supported by professional and reliable human resources.",
+    "missionTitle": "Mission",
+    "missions": [
+      "Completing projects in accordance with the schedule specified by the project owner.",
+      "Completing projects in accordance with the project owner's specifications.",
+      "Ensuring that the use of buildings and/or infrastructure is safe for facility users.",
+      "Carrying out construction according to the established budget, with costs fully accountable to the Company's Board of Directors.",
+      "Continuously improving the quality of human resources through training to enhance professionalism."
+    ]
+  },
+  "ManagementTeam": {
+    "title": "Management Team",
+    "subtitle": "Led by dedicated and experienced professionals in the national construction industry",
+    "members": [
+      {
+        "name": "Ir. H. Riadi",
+        "role": "Head of Infrastructure Division"
+      },
+      {
+        "name": "Nur Hudanto",
+        "role": "Project Manager Coordinator"
+      },
+      {
+        "name": "Abdul Aziz Muslim",
+        "role": "Technical Manager"
+      },
+      {
+        "name": "Bambang Prasodjo",
+        "role": "Planning & Control"
+      },
+      {
+        "name": "TC. Bambang Sasikirana",
+        "role": "HSE Manager"
+      },
+      {
+        "name": "Hafid Hanafi",
+        "role": "Accounting & Finance"
+      },
+      {
+        "name": "Ita Endah Tjahjani",
+        "role": "HRD & GA Manager"
+      },
+      {
+        "name": "Suman",
+        "role": "Logistics Manager"
+      },
+      {
+        "name": "Teuku Lutfi Irwansyah",
+        "role": "Marketing Tender"
+      }
+    ]
+  },
+  "WhyChooseUs": {
+    "title": "WHY CHOOSE US",
+    "subtitle": "We are committed to being a <blue>RELIABLE</blue> and <green>TRUSTWORTHY</green> partner for all your construction projects",
+    "items": [
+      {
+        "title": "40+ Years of Experience",
+        "desc": "Established in 1979, we have handled various large-scale construction projects across Indonesia with a proven track record."
+      },
+      {
+        "title": "International Certification",
+        "desc": "Supported by ISO 9001, ISO 45001, ISO 14001, SMK3, and Green Building Council Indonesia certifications."
+      },
+      {
+        "title": "Professional Team",
+        "desc": "Supported by a team of experienced experts in construction, engineering, and project management ready to provide the best solutions."
+      },
+      {
+        "title": "Diverse Portfolio",
+        "desc": "Successfully completed building, industrial, infrastructure, and utility projects with various levels of complexity."
+      },
+      {
+        "title": "Technological Innovation",
+        "desc": "Always adopting the latest construction technologies and efficient working methods for faster and better results."
+      },
+      {
+        "title": "Commitment",
+        "desc": "Dedicated to delivering work of the highest quality that exceeds client expectations."
+      }
+    ]
+  },
+  "ProjectsSection": {
+    "badge": "Our Portfolio",
+    "title": "Our Projects",
+    "subtitle": "Various projects we have completed with international quality standards and a commitment to excellence in every execution.",
+    "filterAll": "All",
+    "filterAMP": "AMP",
+    "filterInfra": "Infrastructure",
+    "filterSDA": "SDA",
+    "yearPrefix": "Year",
+    "moreDetails": "More Details",
+    "viewAll": "View All Projects"
+  },
+  "CTA": {
+    "title": "Ready to Collaborate with Us?",
+    "subtitle": "Let's discuss your national-scale infrastructure and construction project needs with our trusted team of experts.",
+    "button": "Contact Us Now"
+  },
+  "Certification": {
+    "title": "Certification & Legality"
+  },
+  "ProjectsPage": {
+    "badge": "Our Portfolio",
+    "title": "Our Projects",
+    "subtitle": "Choose a category to view our portfolio of projects completed with international quality standards across Indonesia.",
+    "statProjectsVal": "50+",
+    "statProjectsLabel": "Completed Projects",
+    "statExperienceVal": "40+",
+    "statExperienceLabel": "Years of Experience",
+    "statProvincesVal": "34",
+    "statProvincesLabel": "Provinces",
+    "breadcrumbHome": "Home",
+    "breadcrumbProjects": "Projects",
+    "selectCategoryTitle": "Select Project Category",
+    "selectCategorySubtitle": "We execute various types of projects across three main divisions",
+    "projectsCountLabel": "Projects",
+    "viewProjects": "View Projects",
+    "categories": {
+      "amp": {
+        "fullLabel": "Asphalt Mixing Plant",
+        "description": "Supply and operation of Asphalt Mixing Plant to support road projects and asphalt pavement infrastructure across Indonesia."
+      },
+      "infrastruktur": {
+        "fullLabel": "Infrastructure & Connectivity",
+        "description": "Roads, bridges, airports, and regional connectivity networks linking islands across Indonesia."
+      },
+      "sda": {
+        "fullLabel": "Water Resources",
+        "description": "Dams, irrigation, jetties, and marine infrastructure supporting national water and energy security."
+      }
+    }
+  },
+  "ContactPage": {
+    "metaTitle": "Contact Us — PT Modern Widya Tehnical",
+    "metaDescription": "Contact PT Modern Widya Tehnical for inquiries, partnership proposals, or information on construction and infrastructure projects across Indonesia.",
+    "metaKeywords": ["contact", "address", "phone", "PT Modern Widya Tehnical", "headquarters"],
+    "badge": "Contact Us",
+    "title": "Let's Start Collaborating",
+    "subtitle": "Do you have inquiries or partnership proposals? Contact us directly through the information listed below.",
+    "hqLabel": "Headquarters",
+    "hqVal": "Jl. Villa Tengah Blok E No.7, RT.008/RW.002, Pekayon Jaya, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17148",
+    "igLabel": "Instagram",
+    "emailLabel": "Official Email",
+    "hoursLabel": "Operating Hours",
+    "hoursVal": "Monday – Friday: 10:00 AM – 7:00 PM WIB",
+    "infoText": "For tender bidding requests, printed company profiles, or vendor verification, please send an official email with your corporate letterhead to our procurement division.",
+    "igBadge": "Project & Activity Documentation",
+    "igTitle": "Latest Updates on Instagram",
+    "igSubtitle": "Follow our social media accounts to get updates on physical construction documentation, corporate news, and the latest construction achievements."
+  }
+}

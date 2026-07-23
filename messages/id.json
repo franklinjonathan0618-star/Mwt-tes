@@ -1,0 +1,165 @@
+{
+  "Navbar": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "projects": "Proyek",
+    "contact": "Hubungi Kami"
+  },
+  "Footer": {
+    "tagline": "Rekanan yang HANDAL dan TERPERCAYA",
+    "description": "Perusahaan jasa konstruksi nasional berdiri sejak 1979, berpengalaman lebih dari 40 tahun dalam proyek Gedung, Infrastruktur, Industri, dan Utilitas di seluruh Indonesia.",
+    "menu": "Menu",
+    "menuHome": "Beranda",
+    "menuAbout": "Tentang",
+    "menuProjects": "Proyek",
+    "menuContact": "Kontak",
+    "contact": "Kontak",
+    "location": "Lokasi Kami",
+    "copyright": "PT Modern Widya Tehnical. Hak Cipta Dilindungi."
+  },
+  "Hero": {
+    "title": "PT MODERN WIDYA TEHNICAL",
+    "subtitle": "Divisi Infrastruktur",
+    "description": "Perusahaan Nasional Jasa Konstruksi Sejak 1979. Berpengalaman lebih dari 40 tahun menangani proyek Gedung, Industri, Infrastruktur, dan Utilitas di seluruh Indonesia dengan standar internasional dan tim profesional. Kami berkomitmen menjadi rekanan yang <bold>HANDAL dan TERPERCAYA</bold>.",
+    "ctaProjects": "Lihat Proyek Kami",
+    "ctaContact": "Hubungi Kami"
+  },
+  "About": {
+    "title": "PROFIL PERUSAHAAN",
+    "paragraph1": "Berdasarkan Akta Notaris No. 75 tanggal 24 Juni 2021, dan Keputusan Menteri Hukum dan HAM RI No. AHU-0002735.AH.01.01 TAHUN 2021 tentang Pengangkatan Sdr. Ir. RIADI sebagai Kepala Divisi Infrastruktur PT. Modern Widya Tehnical.",
+    "paragraph2": "PT Modern Widya Tehnical adalah perusahaan nasional jasa konstruksi berdiri sejak 1979, berpengalaman lebih dari 40 tahun menangani berbagai Proyek Gedung, Industri, Infrastruktur, dan Utilitas di seluruh Indonesia. Didukung standar internasional dan tim profesional. Kami berkomitmen menjadi rekanan yang HANDAL dan TERPERCAYA.",
+    "paragraph3": "Memasuki usia lebih dari 40 tahun, kami telah menangani berbagai bidang jasa konstruksi, meliputi pembangunan gedung, kawasan komersial, perumahan, fasilitas industri, infrastruktur jalan dan jembatan, bangunan air, pelabuhan, pembangkit listrik, hingga proyek rancang dan bangun. Hasil karya kami tersebar di hampir seluruh wilayah Indonesia, mulai dari Sumatera hingga Papua.",
+    "statExperience": "Tahun Pengalaman",
+    "statProjects": "Proyek Selesai",
+    "statSafety": "Standar K3 / Keamanan",
+    "statProvinces": "Provinsi Operasional"
+  },
+  "VisiMisi": {
+    "title": "VISI & MISI",
+    "subtitle": "Arah dan Komitmen Strategis Kami",
+    "visionTitle": "Visi",
+    "visionText": "Menjadi perusahaan konstruksi yang handal dan terpercaya dalam menyelesaikan proyek konstruksi tepat waktu, tepat mutu, tepat biaya, tertib administrasi, dan dengan aman didukung oleh sumber daya manusia yang professional dan handal.",
+    "missionTitle": "Misi",
+    "missions": [
+      "Menyelesaikan proyek sesuai dengan waktu yang ditentukan oleh pemilik proyek.",
+      "Menyelesaikan proyek sesuai dengan spesifikasi pemilik proyek.",
+      "Memastikan bahwa penggunaan bangunan dan / atau infrastruktur aman bagi pengguna fasilitas.",
+      "Pembangunan dilakukan sesuai dengan anggaran biaya yang ditetapkan dan penggunaan biaya dapat dipertanggung jawabkan kepada Direksi Perusahaan.",
+      "Meningkatkan mutu SDM secara terus-menerus melalui pelatihan yang dapat meningkatkan profesionalisme SDM."
+    ]
+  },
+  "ManagementTeam": {
+    "title": "Tim Manajemen",
+    "subtitle": "Dipimpin oleh para profesional berdedikasi dan berpengalaman di industri konstruksi nasional",
+    "members": [
+      { "name": "Ir. H. Riadi", "role": "Kepala Divisi Infrastruktur" },
+      { "name": "Nur Hudanto", "role": "Koordinator Project Manager" },
+      { "name": "Abdul Aziz Muslim", "role": "Manajer Teknik" },
+      { "name": "Bambang Prasodjo", "role": "Pengendalian & Kontrol" },
+      { "name": "TC. Bambang Sasikirana", "role": "Manajer HSE" },
+      { "name": "Hafid Hanafi", "role": "Accounting & Finance" },
+      { "name": "Ita Endah Tjahjani", "role": "Manajer HRD & GA" },
+      { "name": "Suman", "role": "Manajer Logistik" },
+      { "name": "Teuku Lutfi Irwansyah", "role": "Marketing Tender" }
+    ]
+  },
+  "WhyChooseUs": {
+    "title": "MENGAPA MEMILIH KAMI",
+    "subtitle": "Kami berkomitmen menjadi rekanan yang <blue>HANDAL</blue> dan <green>TERPERCAYA</green> untuk setiap proyek konstruksi Anda",
+    "items": [
+      {
+        "title": "Pengalaman 40+ Tahun",
+        "desc": "Berdiri sejak 1979, kami telah menangani berbagai proyek konstruksi skala besar di seluruh Indonesia dengan track record yang terbukti."
+      },
+      {
+        "title": "Sertifikasi Internasional",
+        "desc": "Didukung dengan sertifikasi ISO 9001, ISO 45001, ISO 14001, SMK3, serta Konsil Bangunan Hijau Indonesia."
+      },
+      {
+        "title": "Tim Profesional",
+        "desc": "Didukung oleh tim ahli berpengalaman di bidang konstruksi, teknik, dan manajemen proyek yang siap memberikan solusi terbaik."
+      },
+      {
+        "title": "Portfolio Beragam",
+        "desc": "Berhasil menyelesaikan proyek gedung, industri, infrastruktur, dan utilitas dengan berbagai tingkat kompleksitas."
+      },
+      {
+        "title": "Inovasi Teknologi",
+        "desc": "Selalu mengadopsi teknologi konstruksi terkini dan metode kerja yang efisien untuk hasil yang lebih baik dan cepat."
+      },
+      {
+        "title": "Komitmen",
+        "desc": "Berdedikasi untuk memberikan hasil kerja dengan kualitas terbaik yang melebihi ekspektasi klien."
+      }
+    ]
+  },
+  "ProjectsSection": {
+    "badge": "Portfolio Kami",
+    "title": "Proyek Kami",
+    "subtitle": "Berbagai proyek yang telah kami kerjakan dengan standar kualitas internasional dan komitmen terhadap keunggulan dalam setiap pengerjaan.",
+    "filterAll": "Semua",
+    "filterAMP": "AMP",
+    "filterInfra": "Infrastruktur",
+    "filterSDA": "SDA",
+    "yearPrefix": "Tahun",
+    "moreDetails": "Selengkapnya",
+    "viewAll": "Lihat Semua Proyek"
+  },
+  "CTA": {
+    "title": "Siap Berkolaborasi Bersama Kami?",
+    "subtitle": "Mari diskusikan kebutuhan infrastruktur dan proyek pembangunan berskala nasional Anda bersama tim ahli terpercaya.",
+    "button": "Hubungi Kami Sekarang"
+  },
+  "Certification": {
+    "title": "Sertifikasi & Legalitas"
+  },
+  "ProjectsPage": {
+    "badge": "Portfolio Kami",
+    "title": "Proyek Kami",
+    "subtitle": "Pilih kategori untuk melihat portofolio proyek kami yang telah dikerjakan dengan standar kualitas internasional di seluruh Indonesia.",
+    "statProjectsVal": "50+",
+    "statProjectsLabel": "Proyek Selesai",
+    "statExperienceVal": "40+",
+    "statExperienceLabel": "Tahun Pengalaman",
+    "statProvincesVal": "34",
+    "statProvincesLabel": "Provinsi",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbProjects": "Proyek",
+    "selectCategoryTitle": "Pilih Kategori Proyek",
+    "selectCategorySubtitle": "Kami mengerjakan berbagai jenis proyek di tiga bidang utama",
+    "projectsCountLabel": "Proyek",
+    "viewProjects": "Lihat Proyek",
+    "categories": {
+      "amp": {
+        "fullLabel": "Asphalt Mixing Plant",
+        "description": "Penyediaan dan pengoperasian Asphalt Mixing Plant untuk mendukung proyek jalan dan infrastruktur perkerasan aspal di seluruh Indonesia."
+      },
+      "infrastruktur": {
+        "fullLabel": "Infrastruktur & Konektivitas",
+        "description": "Jalan, jembatan, bandara, dan jaringan konektivitas wilayah yang menghubungkan pulau-pulau di Indonesia."
+      },
+      "sda": {
+        "fullLabel": "Sumber Daya Air",
+        "description": "Bendungan, irigasi, jetty, dan infrastruktur kelautan yang mendukung ketahanan air dan energi nasional."
+      }
+    }
+  },
+  "ContactPage": {
+    "metaTitle": "Hubungi Kami — PT Modern Widya Tehnical",
+    "metaDescription": "Hubungi PT Modern Widya Tehnical untuk pertanyaan, penawaran kerja sama, atau informasi proyek konstruksi dan infrastruktur di seluruh Indonesia.",
+    "metaKeywords": ["kontak", "alamat", "telepon", "PT Modern Widya Tehnical", "kantor pusat"],
+    "badge": "Hubungi Kami",
+    "title": "Mari Mulai Kerja Sama",
+    "subtitle": "Apakah Anda memiliki pertanyaan atau rencana kemitraan? Hubungi kami langsung melalui informasi kontak tertera di bawah ini.",
+    "hqLabel": "Kantor Pusat",
+    "hqVal": "Jl. Villa Tengah Blok E No.7, RT.008/RW.002, Pekayon Jaya, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17148",
+    "igLabel": "Instagram",
+    "emailLabel": "Email Resmi",
+    "hoursLabel": "Jam Operasional",
+    "hoursVal": "Senin – Jumat: 10:00 – 19:00 WIB",
+    "infoText": "Untuk kebutuhan penawaran tender, profil perusahaan tercetak, atau verifikasi vendor, silakan kirimkan email resmi dengan kop surat instansi Anda ke bagian pengadaan.",
+    "igBadge": "Dokumentasi Proyek & Kegiatan",
+    "igTitle": "Kabar Terbaru di Instagram",
+    "igSubtitle": "Ikuti akun sosial media kami untuk mendapatkan update dokumentasi pembangunan fisik, berita perusahaan, dan pencapaian konstruksi terbaru."
+  }
+}
