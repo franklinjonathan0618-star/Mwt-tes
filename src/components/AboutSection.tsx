@@ -17,12 +17,7 @@ export default function AboutSection() {
       {/* Company Profile Section */}
       <section id="profil" style={{ padding: "96px 24px" }}>
         <div ref={ref} style={{ maxWidth: "1280px", margin: "0 auto" }}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
-            gap: "40px",
-            alignItems: "center"
-          }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Text Profile */}
             <div className={`reveal reveal-left ${isInView ? "visible" : ""}`}>
               <h2 style={{
@@ -50,58 +45,46 @@ export default function AboutSection() {
               </div>
             </div>
 
-            {/* Stats Grid */}
-            <div className={`reveal reveal-right reveal-delay-2 ${isInView ? "visible" : ""}`} style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 140px), 1fr))",
-              gap: "16px"
-            }}>
+            {/* Stats Grid - Always 2 Atas 2 Bawah */}
+            <div className={`grid grid-cols-2 gap-4 sm:gap-6 reveal reveal-right reveal-delay-2 ${isInView ? "visible" : ""}`}>
               {/* Stat 1 */}
-              <div style={{
-                background: BLUE,
-                borderRadius: "12px",
-                padding: "36px 28px",
-                color: "#FFFFFF",
-                boxShadow: "0 8px 25px rgba(21, 93, 252, 0.25)"
-              }}>
-                <h3 style={{ fontSize: "52px", fontWeight: 800, margin: 0, lineHeight: "1" }}>40+</h3>
-                <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.85)", margin: "8px 0 0 0", fontWeight: 500 }}>{t("statExperience")}</p>
+              <div
+                className="p-5 sm:p-7 rounded-xl text-white shadow-lg"
+                style={{
+                  background: BLUE,
+                  boxShadow: "0 8px 25px rgba(21, 93, 252, 0.25)"
+                }}
+              >
+                <h3 className="text-3xl sm:text-5xl font-extrabold m-0 leading-none">40+</h3>
+                <p className="text-xs sm:text-sm md:text-base font-medium mt-2 mb-0 opacity-90">{t("statExperience")}</p>
               </div>
 
               {/* Stat 2 */}
-              <div style={{
-                background: BLUE,
-                borderRadius: "12px",
-                padding: "36px 28px",
-                color: "#FFFFFF",
-                boxShadow: "0 8px 25px rgba(21, 93, 252, 0.25)"
-              }}>
-                <h3 style={{ fontSize: "52px", fontWeight: 800, margin: 0, lineHeight: "1" }}>50+</h3>
-                <p style={{ fontSize: "15px", color: "rgba(255,255,255,0.85)", margin: "8px 0 0 0", fontWeight: 500 }}>{t("statProjects")}</p>
+              <div
+                className="p-5 sm:p-7 rounded-xl text-white shadow-lg"
+                style={{
+                  background: BLUE,
+                  boxShadow: "0 8px 25px rgba(21, 93, 252, 0.25)"
+                }}
+              >
+                <h3 className="text-3xl sm:text-5xl font-extrabold m-0 leading-none">50+</h3>
+                <p className="text-xs sm:text-sm md:text-base font-medium mt-2 mb-0 opacity-90">{t("statProjects")}</p>
               </div>
 
               {/* Stat 3 */}
-              <div style={{
-                background: "#FFFFFF",
-                border: "1px solid #E2E8F0",
-                borderRadius: "12px",
-                padding: "36px 28px",
-                boxShadow: "0 1px 3px rgba(0,0,0,0.05)"
-              }}>
-                <h3 style={{ fontSize: "52px", fontWeight: 800, color: BLUE, margin: 0, lineHeight: "1" }}>100%</h3>
-                <p style={{ fontSize: "15px", color: "#6B7280", margin: "8px 0 0 0", fontWeight: 500 }}>{t("statSafety")}</p>
+              <div
+                className="p-5 sm:p-7 rounded-xl bg-white border border-slate-200 shadow-sm"
+              >
+                <h3 className="text-3xl sm:text-5xl font-extrabold m-0 leading-none" style={{ color: BLUE }}>100%</h3>
+                <p className="text-xs sm:text-sm md:text-base text-gray-500 font-medium mt-2 mb-0">{t("statSafety")}</p>
               </div>
 
               {/* Stat 4 */}
-              <div style={{
-                background: "#FFFFFF",
-                border: "1px solid #E2E8F0",
-                borderRadius: "12px",
-                padding: "36px 28px",
-                boxShadow: "0 1px 3px rgba(0,0,0,0.05)"
-              }}>
-                <h3 style={{ fontSize: "52px", fontWeight: 800, color: BLUE, margin: 0, lineHeight: "1" }}>15+</h3>
-                <p style={{ fontSize: "15px", color: "#6B7280", margin: "8px 0 0 0", fontWeight: 500 }}>{t("statProvinces")}</p>
+              <div
+                className="p-5 sm:p-7 rounded-xl bg-white border border-slate-200 shadow-sm"
+              >
+                <h3 className="text-3xl sm:text-5xl font-extrabold m-0 leading-none" style={{ color: BLUE }}>15+</h3>
+                <p className="text-xs sm:text-sm md:text-base text-gray-500 font-medium mt-2 mb-0">{t("statProvinces")}</p>
               </div>
             </div>
           </div>
