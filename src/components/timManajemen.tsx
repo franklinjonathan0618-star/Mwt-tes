@@ -68,6 +68,31 @@ export default function TimManajemen({
     startAutoPlay();
   };
 
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 40;
+    if (distance > minSwipeDistance) {
+      handleNext();
+    } else if (distance < -minSwipeDistance) {
+      handlePrev();
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   if (!items || items.length === 0) return null;
 
   // Split text "Name - Role" into separate fields
@@ -91,7 +116,11 @@ export default function TimManajemen({
       padding: "20px 0"
     }}>
       {/* Slider Carousel Window */}
-      <div style={{
+      <div
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        style={{
         position: "relative",
         width: "100%",
         maxWidth: "900px",

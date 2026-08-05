@@ -305,6 +305,31 @@ export default function InstagramFeed() {
     }
   };
 
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 40;
+    if (distance > minSwipeDistance) {
+      handleScroll("right");
+    } else if (distance < -minSwipeDistance) {
+      handleScroll("left");
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   const BLUE = "#155DFC";
 
   if (loading) {
@@ -463,6 +488,9 @@ export default function InstagramFeed() {
         {/* Horizontal track container - 4 columns, 2 rows (4 top, 4 bottom) */}
         <div
           ref={scrollRef}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
           className="instagram-slider-track hide-scrollbar"
         >
           {posts.map((post) => (
