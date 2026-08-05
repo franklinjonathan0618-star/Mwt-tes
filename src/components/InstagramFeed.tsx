@@ -43,84 +43,84 @@ const InstagramIcon = ({ size = 20, style }: { size?: number; style?: React.CSSP
 const fallbackPosts: InstagramPost[] = [
   {
     id: "fb1",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
     caption: "Pembangunan struktur beton modern dengan presisi tinggi dan standar keamanan terbaik.",
     media_type: "IMAGE"
   },
   {
     id: "fb2",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80",
     caption: "Alat berat bekerja di lokasi proyek jalan tol nasional. Dedikasi untuk konektivitas bangsa.",
     media_type: "IMAGE"
   },
   {
     id: "fb3",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
     caption: "Tim engineer melakukan inspeksi berkala di dermaga PLTU untuk memastikan kekuatan struktur.",
     media_type: "IMAGE"
   },
   {
     id: "fb4",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
     caption: "Sinergi, profesionalisme, dan integritas dalam mewujudkan infrastruktur masa depan Indonesia.",
     media_type: "IMAGE"
   },
   {
     id: "fb5",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1581094288338-2314dddb7eed?w=600&q=80",
     caption: "Mengutamakan keselamatan kerja (K3) di setiap jengkel pengerjaan proyek kami.",
     media_type: "IMAGE"
   },
   {
     id: "fb6",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&q=80",
     caption: "Gedung perkantoran modern berkonsep smart & green building garapan PT Modern Widya Tehnical.",
     media_type: "IMAGE"
   },
   {
     id: "fb7",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?w=600&q=80",
     caption: "Proyek bendungan berskala nasional untuk ketahanan pangan dan pengairan Indonesia.",
     media_type: "IMAGE"
   },
   {
     id: "fb8",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1517089539026-2475136411e9?w=600&q=80",
     caption: "Kualitas aspal premium dari Asphalt Mixing Plant (AMP) milik sendiri untuk hasil jalan terbaik.",
     media_type: "IMAGE"
   },
   {
     id: "fb9",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1513828583845-9ab68853667c?w=600&q=80",
     caption: "Fasilitas industri dan pengolahan berskala besar dengan integrasi teknologi tinggi.",
     media_type: "IMAGE"
   },
   {
     id: "fb10",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1503387762-592dedbd82d2?w=600&q=80",
     caption: "Perancangan arsitektur dan kalkulasi struktur mendalam untuk menjamin kekuatan jangka panjang.",
     media_type: "IMAGE"
   },
   {
     id: "fb11",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?w=600&q=80",
     caption: "Konstruksi jembatan layang dan jalan tol perkotaan guna mengurai kepadatan lalu lintas.",
     media_type: "IMAGE"
   },
   {
     id: "fb12",
-    permalink: "https://www.instagram.com",
+    permalink: "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     media_url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80",
     caption: "Gedung pencakar langit komersial yang berpadu dengan tata kota modern Indonesia.",
     media_type: "IMAGE"
@@ -334,7 +334,8 @@ export default function InstagramFeed() {
   }
 
   const igUsername = profile?.username || "modernwidyatehnical";
-  const igLink = `https://www.instagram.com/${igUsername}`;
+  const igFallbackLink = "https://www.instagram.com/mwt_infrastruktur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+  const igLink = isFallback ? igFallbackLink : `https://www.instagram.com/${igUsername}`;
 
   return (
     <div style={{ width: "100%" }}>

@@ -35,6 +35,7 @@ export default function Footer() {
   };
 
   return (
+    <>
     <footer style={{ backgroundColor: BLUE, color: "#FFFFFF", padding: "64px 24px 32px 24px" }}>
       <div style={{ maxWidth: "1120px", margin: "0 auto" }}>
         {/* Top Grid */}
@@ -68,6 +69,8 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Menu + Kontak side by side */}
+          <div className="footer-menu-kontak" style={{ display: "flex", flexDirection: "row", gap: "40px", flex: "1 1 auto" }}>
           {/* Quick Links / Menu */}
           <div style={{ flex: "1 1 120px", maxWidth: "160px" }}>
             <h4 style={{ fontSize: "16px", fontWeight: 700, marginBottom: "20px", color: "#FFFFFF" }}>
@@ -137,6 +140,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+          </div>
 
           {/* Location Kami */}
           <div style={{ flex: "1 1 260px", maxWidth: "300px" }}>
@@ -176,5 +180,21 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    <style dangerouslySetInnerHTML={{
+      __html: `
+        @media (max-width: 768px) {
+          .footer-menu-kontak {
+            flex-direction: row !important;
+            gap: 24px !important;
+            width: 100%;
+          }
+          .footer-menu-kontak > div {
+            flex: 1 1 0 !important;
+            max-width: none !important;
+          }
+        }
+      `
+    }} />
+    </>
   );
 }

@@ -211,6 +211,15 @@ function MobileDrawerContent({
           alt="PT Modern Widya Tehnical"
           style={{ height: "36px", width: "auto" }}
         />
+        <span style={{
+          color: "#FFFFFF",
+          fontWeight: 700,
+          fontSize: "14px",
+          lineHeight: "1.2",
+          flex: 1
+        }}>
+          PT. Modern Widya Tehnical
+        </span>
         <button
           onClick={onClose}
           style={{

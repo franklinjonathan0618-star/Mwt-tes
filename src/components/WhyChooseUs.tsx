@@ -99,9 +99,8 @@ export default function WhyChooseUs() {
               })}
             </p>
           </div>
-          <div style={{
+          <div className="why-choose-us-grid" style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
             gap: "24px"
           }}>
             {cardsData.map((value, i) => {
@@ -165,6 +164,23 @@ export default function WhyChooseUs() {
           </div>
         </div>
       </section>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .why-choose-us-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          @media (max-width: 900px) {
+            .why-choose-us-grid {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+          @media (max-width: 600px) {
+            .why-choose-us-grid {
+              grid-template-columns: 1fr;
+            }
+          }
+        `
+      }} />
     </div>
   );
 }
