@@ -32,7 +32,7 @@ function scrollToHash(hash: string) {
   const id = hash.replace("#", "");
   const el = document.getElementById(id);
   if (el) {
-    el.scrollIntoView({ behavior: "instant", block: "start" });
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
@@ -209,14 +209,15 @@ function MobileDrawerContent({
         <img
           src="/logo/lgwhite.png"
           alt="PT Modern Widya Tehnical"
-          style={{ height: "36px", width: "auto" }}
+          style={{ height: "28px", width: "auto", flexShrink: 0 }}
         />
         <span style={{
           color: "#FFFFFF",
           fontWeight: 700,
-          fontSize: "14px",
-          lineHeight: "1.2",
-          flex: 1
+          fontSize: "12px",
+          lineHeight: "1.3",
+          flex: 1,
+          marginLeft: "8px"
         }}>
           PT. Modern Widya Tehnical
         </span>

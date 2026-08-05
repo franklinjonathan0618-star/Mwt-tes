@@ -45,50 +45,37 @@ export default function KontakPage() {
         
         {/* Hero Section */}
         <section style={{
-          background: "linear-gradient(135deg, #0B132B 0%, #1C2541 100%)",
+          background: `linear-gradient(135deg, ${BLUE} 0%, #0D3FBA 100%)`,
           color: "#FFFFFF",
           padding: "100px 24px 32px 24px",
           textAlign: "center",
           position: "relative",
           overflow: "hidden"
         }}>
-          {/* Subtle decoration */}
-          <div style={{
+           <div style={{
             position: "absolute",
-            top: "-50%",
-            left: "-20%",
-            width: "60%",
-            height: "150%",
-            background: `radial-gradient(circle, ${BLUE}15 0%, transparent 70%)`,
+            top: "-80px",
+            right: "-80px",
+            width: "300px",
+            height: "300px",
+            borderRadius: "50%",
+            background: "rgba(255,255,255,0.05)",
             pointerEvents: "none"
           }} />
           <div style={{
             position: "absolute",
-            bottom: "-50%",
-            right: "-20%",
-            width: "60%",
-            height: "150%",
-            background: "radial-gradient(circle, #0284C715 0%, transparent 70%)",
+            bottom: "-60px",
+            left: "-60px",
+            width: "220px",
+            height: "220px",
+            borderRadius: "50%",
+            background: "rgba(255,255,255,0.04)",
             pointerEvents: "none"
           }} />
 
           <RevealSection variant="up">
             <div style={{ maxWidth: "800px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-              <span style={{
-                backgroundColor: `${BLUE}22`,
-                color: "#38BDF8",
-                fontSize: "12px",
-                fontWeight: 700,
-                letterSpacing: "2px",
-                textTransform: "uppercase",
-                padding: "6px 16px",
-                borderRadius: "999px",
-                display: "inline-block",
-                marginBottom: "16px",
-                border: `1px solid ${BLUE}44`
-              }}>
-                {t("badge")}
-              </span>
+
               <h1 style={{
                 fontSize: "clamp(32px, 5vw, 48px)",
                 fontWeight: 800,
@@ -99,7 +86,7 @@ export default function KontakPage() {
               </h1>
               <p style={{
                 fontSize: "clamp(15px, 2vw, 18px)",
-                color: "#94A3B8",
+                color: "rgba(255,255,255,0.85)",
                 lineHeight: "1.6",
                 maxWidth: "600px",
                 margin: "0 auto"

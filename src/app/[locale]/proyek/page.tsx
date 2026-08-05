@@ -86,18 +86,8 @@ export default function ProyekPage() {
           <div style={{ position: "absolute", bottom: "-60px", left: "-60px", width: "220px", height: "220px", borderRadius: "50%", background: "rgba(255,255,255,0.04)" }} />
 
           <div style={{ maxWidth: "1400px", margin: "0 auto", position: "relative", zIndex: 2, textAlign: "center" }}>
-            <span style={{
-              display: "inline-block",
-              backgroundColor: "rgba(255,255,255,0.18)", color: "#FFFFFF",
-              fontSize: "12px", fontWeight: 700, letterSpacing: "3px",
-              textTransform: "uppercase", padding: "6px 18px", borderRadius: "999px",
-              marginBottom: "20px",
-              opacity: mounted ? 1 : 0,
-              transform: mounted ? "translateY(0)" : "translateY(20px)",
-              transition: "opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.1s",
-            }}>
-              {t("badge")}
-            </span>
+
+
             <h1 style={{
               fontSize: "clamp(36px, 5vw, 56px)", fontWeight: 800, color: "#FFFFFF",
               textTransform: "uppercase", letterSpacing: "2px", lineHeight: "1.1", marginBottom: "20px",
