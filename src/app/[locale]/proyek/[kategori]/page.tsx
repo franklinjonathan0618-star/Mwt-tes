@@ -53,16 +53,17 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
           <div style={{ position: "absolute", top: "-80px", right: "-80px", width: "300px", height: "300px", borderRadius: "50%", background: "rgba(255,255,255,0.06)" }} />
           <div style={{ position: "absolute", bottom: "-60px", left: "-60px", width: "220px", height: "220px", borderRadius: "50%", background: "rgba(255,255,255,0.04)" }} />
 
-          <div style={{
-            maxWidth: "1400px",
-            margin: "0 auto",
-            position: "relative",
-            zIndex: 2,
-            display: "grid",
-            gridTemplateColumns: isAMP ? "1fr 1fr" : "1fr",
-            gap: "48px",
-            alignItems: "center",
-          }}>
+          <div
+            className={`grid gap-8 lg:gap-12 items-center ${
+              isAMP ? "grid-cols-1 lg:grid-cols-2" : "grid-cols-1"
+            }`}
+            style={{
+              maxWidth: "1400px",
+              margin: "0 auto",
+              position: "relative",
+              zIndex: 2,
+            }}
+          >
             {/* ── Left: text content ── */}
             <div style={{
               opacity: mounted ? 1 : 0,
@@ -118,13 +119,16 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
               </span>
             </div>
 
-            {/* ── Right: video (AMP only) ── */}
+            {/* ── Right / Bottom: video (AMP only) ── */}
             {isAMP && (
-              <div style={{
-                opacity: mounted ? 1 : 0,
-                transform: mounted ? "scale(1)" : "scale(0.95)",
-                transition: "opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s",
-              }}>
+              <div
+                className="w-full max-w-2xl mx-auto lg:max-w-none"
+                style={{
+                  opacity: mounted ? 1 : 0,
+                  transform: mounted ? "scale(1)" : "scale(0.95)",
+                  transition: "opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s",
+                }}
+              >
                 <AMPVideo color={meta.color} />
               </div>
             )}
