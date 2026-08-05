@@ -23,8 +23,8 @@ const getProyekItems = (locale: string) => [
 ];
 
 const languages = [
-  { code: "id", label: "Indonesian", flag: "🇮🇩" },
-  { code: "en", label: "English", flag: "🇬🇧" },
+  { code: "id", label: "Indonesian", flag: "https://flagcdn.com/w40/id.png" },
+  { code: "en", label: "English", flag: "https://flagcdn.com/w40/gb.png" },
 ];
 
 /* ─── Anchor scroll helper ────────────────────────── */
@@ -325,7 +325,7 @@ function MobileDrawerContent({
                   cursor: "pointer",
                 }}
               >
-                <span style={{ fontSize: "16px" }}>{lang.flag}</span>
+                <img src={lang.flag} alt={lang.label} style={{ width: "20px", height: "14px", objectFit: "cover", borderRadius: "2px" }} />
                 {lang.label}
               </button>
             ))}
@@ -507,7 +507,7 @@ export default function Navbar() {
                 onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.22)"; }}
                 onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.15)"; }}
               >
-                <span style={{ fontSize: "18px", lineHeight: 1 }}>{activeLang.flag}</span>
+                <img src={activeLang.flag} alt={activeLang.label} style={{ width: "20px", height: "14px", objectFit: "cover", borderRadius: "2px" }} />
                 {activeLang.label}
                 <ChevronDown size={14} style={{ transition: "transform 0.2s", transform: langOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
               </button>
@@ -530,7 +530,7 @@ export default function Navbar() {
                     onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#EEF3FF"; }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = lang.code === activeLang.code ? "#EEF3FF" : "transparent"; }}
                   >
-                    <span style={{ fontSize: "18px" }}>{lang.flag}</span>
+                    <img src={lang.flag} alt={lang.label} style={{ width: "20px", height: "14px", objectFit: "cover", borderRadius: "2px" }} />
                     {lang.label}
                   </button>
                 ))}
@@ -560,7 +560,7 @@ export default function Navbar() {
               onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.22)"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.15)"; }}
             >
-              <span style={{ fontSize: "16px", lineHeight: 1 }}>{activeLang.flag}</span>
+              <img src={activeLang.flag} alt={activeLang.label} style={{ width: "18px", height: "12px", objectFit: "cover", borderRadius: "2px" }} />
               <span>{activeLang.code.toUpperCase()}</span>
               <ChevronDown size={12} style={{ transition: "transform 0.2s", transform: mobileLangOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
             </button>
@@ -583,7 +583,7 @@ export default function Navbar() {
                     onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#EEF3FF"; }}
                     onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = lang.code === activeLang.code ? "#EEF3FF" : "transparent"; }}
                   >
-                    <span style={{ fontSize: "16px" }}>{lang.flag}</span>
+                    <img src={lang.flag} alt={lang.label} style={{ width: "18px", height: "12px", objectFit: "cover", borderRadius: "2px" }} />
                     {lang.label}
                   </button>
                 ))}

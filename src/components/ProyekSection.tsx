@@ -101,6 +101,37 @@ export default function ProyekSection() {
     goTo(safeIndex + 1, "right");
   };
 
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 40;
+    if (distance > minSwipeDistance) {
+      if (safeIndex < totalSlides - 1) {
+        next();
+        resetAuto();
+      }
+    } else if (distance < -minSwipeDistance) {
+      if (safeIndex > 0) {
+        prev();
+        resetAuto();
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   // Auto-play
   useEffect(() => {
     autoRef.current = setInterval(() => {
@@ -143,20 +174,6 @@ export default function ProyekSection() {
 
         {/* Header */}
         <div className={`reveal reveal-up ${isInView ? "visible" : ""}`} style={{ textAlign: "center", marginBottom: "48px" }}>
-          <span style={{
-            display: "inline-block",
-            fontSize: "12px",
-            fontWeight: 700,
-            color: BLUE,
-            textTransform: "uppercase",
-            letterSpacing: "3px",
-            marginBottom: "12px",
-            backgroundColor: "#EEF3FF",
-            padding: "6px 16px",
-            borderRadius: "999px",
-          }}>
-            {t("badge")}
-          </span>
           <h2 style={{
             fontSize: "clamp(34px, 5vw, 44px)",
             fontWeight: 800,
@@ -271,6 +288,9 @@ export default function ProyekSection() {
           {/* Cards Grid */}
           <div
             ref={sliderRef}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
             style={{
               display: "grid",
               gridTemplateColumns: `repeat(${Math.min(visibleCount, filtered.length)}, 1fr)`,

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback, useRef } from "react";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 
 type Slide =
@@ -21,8 +21,9 @@ export default function HeroSection() {
   const locale = useLocale();
   const [current, setCurrent] = useState(0);
   const [mounted, setMounted] = useState(false);
-  const rafRef = useRef<number | null>(null);
   const startRef = useRef<number>(Date.now());
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
 
   useEffect(() => {
     setMounted(true);
@@ -41,6 +42,32 @@ export default function HeroSection() {
     goTo((current + 1) % slides.length);
   }, [current, goTo]);
 
+  const goPrev = useCallback(() => {
+    goTo((current - 1 + slides.length) % slides.length);
+  }, [current, goTo]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 40;
+    if (distance > minSwipeDistance) {
+      goNext();
+    } else if (distance < -minSwipeDistance) {
+      goPrev();
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   // Auto-advance
   useEffect(() => {
     const t = setTimeout(goNext, DURATION);
@@ -51,6 +78,9 @@ export default function HeroSection() {
     <section
       id="hero"
       className="relative overflow-hidden"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
       style={{ height: "100svh", minHeight: "600px" }}
     >
       {/* ─── Backgrounds (berganti) ─── */}
@@ -274,6 +304,77 @@ export default function HeroSection() {
           />
         ))}
       </div>
+
+      {/* ─── Navigation Arrows ─── */}
+      <button
+        onClick={goPrev}
+        aria-label="Previous slide"
+        style={{
+          position: "absolute",
+          left: "16px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          width: "44px",
+          height: "44px",
+          borderRadius: "50%",
+          backgroundColor: "rgba(255, 255, 255, 0.18)",
+          backdropFilter: "blur(6px)",
+          border: "1px solid rgba(255, 255, 255, 0.3)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#FFFFFF",
+          cursor: "pointer",
+          zIndex: 10,
+          transition: "all 0.2s ease",
+          outline: "none",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = "#155DFC";
+          e.currentTarget.style.borderColor = "#155DFC";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.18)";
+          e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.3)";
+        }}
+      >
+        <ChevronLeft size={24} />
+      </button>
+
+      <button
+        onClick={goNext}
+        aria-label="Next slide"
+        style={{
+          position: "absolute",
+          right: "16px",
+          top: "50%",
+          transform: "translateY(-50%)",
+          width: "44px",
+          height: "44px",
+          borderRadius: "50%",
+          backgroundColor: "rgba(255, 255, 255, 0.18)",
+          backdropFilter: "blur(6px)",
+          border: "1px solid rgba(255, 255, 255, 0.3)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#FFFFFF",
+          cursor: "pointer",
+          zIndex: 10,
+          transition: "all 0.2s ease",
+          outline: "none",
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.backgroundColor = "#155DFC";
+          e.currentTarget.style.borderColor = "#155DFC";
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.18)";
+          e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.3)";
+        }}
+      >
+        <ChevronRight size={24} />
+      </button>
     </section>
   );
 }
