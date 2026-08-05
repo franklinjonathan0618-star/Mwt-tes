@@ -309,6 +309,7 @@ export default function HeroSection() {
       <button
         onClick={goPrev}
         aria-label="Previous slide"
+        className="hidden md:flex"
         style={{
           position: "absolute",
           left: "16px",
@@ -320,7 +321,6 @@ export default function HeroSection() {
           backgroundColor: "rgba(255, 255, 255, 0.18)",
           backdropFilter: "blur(6px)",
           border: "1px solid rgba(255, 255, 255, 0.3)",
-          display: "flex",
           alignItems: "center",
           justifyContent: "center",
           color: "#FFFFFF",
@@ -344,6 +344,7 @@ export default function HeroSection() {
       <button
         onClick={goNext}
         aria-label="Next slide"
+        className="hidden md:flex"
         style={{
           position: "absolute",
           right: "16px",
@@ -355,7 +356,6 @@ export default function HeroSection() {
           backgroundColor: "rgba(255, 255, 255, 0.18)",
           backdropFilter: "blur(6px)",
           border: "1px solid rgba(255, 255, 255, 0.3)",
-          display: "flex",
           alignItems: "center",
           justifyContent: "center",
           color: "#FFFFFF",
