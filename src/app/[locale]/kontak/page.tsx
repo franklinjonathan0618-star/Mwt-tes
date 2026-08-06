@@ -144,17 +144,35 @@ export default function KontakPage() {
 
             {/* Card 2: Instagram */}
             <RevealSection variant="up" delay={2} style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{
-                backgroundColor: "#FFFFFF",
-                borderRadius: "16px",
-                border: "1px solid #E2E8F0",
-                padding: "28px",
-                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.02)",
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-                height: "100%"
-              }}>
+              <a
+                href="https://www.instagram.com/mwt_infrastruktur"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  borderRadius: "16px",
+                  border: "1px solid #E2E8F0",
+                  padding: "28px",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.02)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                  height: "100%",
+                  textDecoration: "none",
+                  transition: "all 0.2s ease-in-out",
+                  cursor: "pointer"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.borderColor = BLUE;
+                  e.currentTarget.style.boxShadow = "0 12px 24px rgba(21, 93, 252, 0.12)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.borderColor = "#E2E8F0";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.02)";
+                }}
+              >
                 <div style={{
                   width: "48px",
                   height: "48px",
@@ -173,22 +191,40 @@ export default function KontakPage() {
                     @mwt_infrastruktur
                   </p>
                 </div>
-              </div>
+              </a>
             </RevealSection>
 
             {/* Card 3: Email */}
             <RevealSection variant="up" delay={3} style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{
-                backgroundColor: "#FFFFFF",
-                borderRadius: "16px",
-                border: "1px solid #E2E8F0",
-                padding: "28px",
-                boxShadow: "0 4px 12px rgba(0, 0, 0, 0.02)",
-                display: "flex",
-                flexDirection: "column",
-                gap: "16px",
-                height: "100%"
-              }}>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=info@modernwidyatehnical.co.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  borderRadius: "16px",
+                  border: "1px solid #E2E8F0",
+                  padding: "28px",
+                  boxShadow: "0 4px 12px rgba(0, 0, 0, 0.02)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "16px",
+                  height: "100%",
+                  textDecoration: "none",
+                  transition: "all 0.2s ease-in-out",
+                  cursor: "pointer"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.borderColor = BLUE;
+                  e.currentTarget.style.boxShadow = "0 12px 24px rgba(21, 93, 252, 0.12)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.borderColor = "#E2E8F0";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.02)";
+                }}
+              >
                 <div style={{
                   width: "48px",
                   height: "48px",
@@ -207,7 +243,7 @@ export default function KontakPage() {
                     info@modernwidyatehnical.co.id
                   </p>
                 </div>
-              </div>
+              </a>
             </RevealSection>
 
             {/* Card 4: Jam Kerja */}
