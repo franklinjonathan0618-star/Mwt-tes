@@ -39,8 +39,8 @@ const categoriesData = [
   },
   {
     slug: "sda",
-    color: "#0284C7",
-    bgGradient: "linear-gradient(135deg, #0284C7 0%, #0369A1 100%)",
+    color: "#155DFC",
+    bgGradient: "linear-gradient(135deg, #155DFC 0%, #0D3FBA 100%)",
     icon: <Waves size={32} color="#FFFFFF" />,
     image: "/images/proyek/SDA/SDA/PLTMCitadih.png",
   },

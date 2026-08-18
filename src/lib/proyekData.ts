@@ -456,7 +456,7 @@ export const allProjects: Project[] = [
     category: "SDA",
     categoryLabel: "SDA",
     categoryLabelEn: "Water Resources",
-    categoryColor: "#0284C7",
+    categoryColor: "#155DFC",
     title: "Bangunan Air untuk PLTM Citadih Sukabumi",
     titleEn: "Water Works for Citadih Mini-Hydro Power Plant Sukabumi",
     description:
@@ -483,7 +483,7 @@ export const allProjects: Project[] = [
     category: "SDA",
     categoryLabel: "SDA",
     categoryLabelEn: "Water Resources",
-    categoryColor: "#0284C7",
+    categoryColor: "#155DFC",
     title: "Trestle & Jetty PLTU Papua 2",
     titleEn: "Trestle & Jetty PLTU Papua 2",
     description:
@@ -510,7 +510,7 @@ export const allProjects: Project[] = [
     category: "SDA",
     categoryLabel: "SDA",
     categoryLabelEn: "Water Resources",
-    categoryColor: "#0284C7",
+    categoryColor: "#155DFC",
     title: "Bendung & Saluran Supelsi di Sel Silau Tahap I",
     titleEn: "Dam & Supply Channel at Sei Silau Phase I",
     description:
@@ -537,7 +537,7 @@ export const allProjects: Project[] = [
     category: "SDA",
     categoryLabel: "SDA",
     categoryLabelEn: "Water Resources",
-    categoryColor: "#0284C7",
+    categoryColor: "#155DFC",
     title: "Breasting Dolphin BDS, Continuous Fender dan Catwalk Jetty 5c",
     titleEn: "Breasting Dolphin BDS, Continuous Fender and Catwalk Jetty 5c",
     description:
@@ -587,7 +587,7 @@ export const categoryMeta: Record<
   sda: {
     label: "SDA",
     labelEn: "Water Resources",
-    color: "#0284C7",
+    color: "#155DFC",
     description:
       "Pembangunan konstruksi Sumber Daya Air, bendung, irigasi kelautan, dan struktur jetty laut.",
     descriptionEn:
