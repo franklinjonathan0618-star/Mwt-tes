@@ -59,12 +59,12 @@ export default function Footer() {
                 <h3 style={{ fontSize: "clamp(15px, 2.5vw, 18px)", fontWeight: 700, margin: 0, color: "#FFFFFF", lineHeight: "1.2", whiteSpace: "nowrap" }}>
                   PT Modern Widya Tehnical
                 </h3>
-                <p style={{ fontSize: "11px", color: "rgba(255, 255, 255, 0.95)", margin: "4px 0 0 0", fontWeight: 600, letterSpacing: "0.5px" }}>
+                <p style={{ fontSize: "11px", color: "rgba(255, 255, 255, 0.8)", margin: "4px 0 0 0", fontWeight: 500, letterSpacing: "0.5px" }}>
                   {t("tagline")}
                 </p>
               </div>
             </div>
-            <p style={{ color: "rgba(255, 255, 255, 0.95)", fontSize: "14px", lineHeight: "1.7", margin: 0, textAlign: "justify" }}>
+            <p style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "14px", lineHeight: "1.7", margin: 0, textAlign: "justify" }}>
               {t("description")}
             </p>
           </div>
@@ -87,14 +87,13 @@ export default function Footer() {
                   <a
                     href={getLocalizedHref(link.href)}
                     style={{
-                      color: "#FFFFFF",
+                      color: "rgba(255, 255, 255, 0.8)",
                       fontSize: "14px",
                       textDecoration: "none",
-                      transition: "opacity 0.2s",
-                      opacity: 0.95,
+                      transition: "color 0.2s",
                     }}
-                    onMouseEnter={(e) => { e.currentTarget.style.opacity = "1"; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.opacity = "0.95"; }}
+                    onMouseEnter={(e) => { e.currentTarget.style.color = "#FFFFFF"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(255, 255, 255, 0.8)"; }}
                   >
                     {link.label}
                   </a>
@@ -109,9 +108,9 @@ export default function Footer() {
               {t("contact")}
             </h4>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "16px" }}>
-              <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "14px", color: "#FFFFFF" }}>
+              <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "14px", color: "rgba(255, 255, 255, 0.8)" }}>
                 <div style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  backgroundColor: "rgba(255, 255, 255, 0.15)",
                   borderRadius: "50%",
                   width: "36px",
                   height: "36px",
@@ -124,9 +123,9 @@ export default function Footer() {
                 </div>
                 <span>@mwt_infrastruktur</span>
               </li>
-              <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "14px", color: "#FFFFFF" }}>
+              <li style={{ display: "flex", alignItems: "center", gap: "12px", fontSize: "14px", color: "rgba(255, 255, 255, 0.8)" }}>
                 <div style={{
-                  backgroundColor: "rgba(255, 255, 255, 0.2)",
+                  backgroundColor: "rgba(255, 255, 255, 0.15)",
                   borderRadius: "50%",
                   width: "36px",
                   height: "36px",
@@ -149,17 +148,17 @@ export default function Footer() {
               {t("location")}
             </h4>
             <div style={{
-              backgroundColor: "rgba(255, 255, 255, 0.12)",
+              backgroundColor: "rgba(255, 255, 255, 0.08)",
               borderRadius: "12px",
               padding: "16px",
               display: "flex",
               alignItems: "flex-start",
               gap: "12px",
-              border: "1px solid rgba(255, 255, 255, 0.2)",
+              border: "1px solid rgba(255, 255, 255, 0.12)",
               maxWidth: "300px"
             }}>
               <MapPin size={20} style={{ color: "#FFFFFF", flexShrink: 0, marginTop: "2px" }} />
-              <span style={{ fontSize: "13px", lineHeight: "1.6", color: "#FFFFFF", fontWeight: 500 }}>
+              <span style={{ fontSize: "13px", lineHeight: "1.6", color: "rgba(255, 255, 255, 0.9)" }}>
                 Jl. Villa Tengah Blok E No.7, RT.008/RW.002, Pekayon Jaya, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17148
               </span>
             </div>
@@ -167,16 +166,15 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div style={{ height: "1px", backgroundColor: "rgba(255, 255, 255, 0.2)", marginBottom: "32px" }}></div>
+        <div style={{ height: "1px", backgroundColor: "rgba(255, 255, 255, 0.15)", marginBottom: "32px" }}></div>
 
         {/* Bottom Area */}
         <div style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          color: "#FFFFFF",
-          fontSize: "13px",
-          fontWeight: 500
+          color: "rgba(255, 255, 255, 0.7)",
+          fontSize: "13px"
         }}>
           <p>© {new Date().getFullYear()} - {t("copyright")}</p>
         </div>

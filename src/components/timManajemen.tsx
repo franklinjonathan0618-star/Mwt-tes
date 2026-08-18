@@ -29,13 +29,12 @@ export default function TimManajemen({
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    const mql = window.matchMedia("(max-width: 639px)");
     const handleResize = () => {
-      setIsMobile(mql.matches);
+      setIsMobile(window.innerWidth < 640);
     };
     handleResize();
-    mql.addEventListener("change", handleResize);
-    return () => mql.removeEventListener("change", handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const startAutoPlay = useCallback(() => {
@@ -271,7 +270,7 @@ export default function TimManajemen({
         alignItems: "center",
         justifyContent: "center"
       }}>
-        <h3 style={{
+        <h4 style={{
           fontSize: "clamp(20px, 4.5vw, 28px)",
           fontWeight: 700,
           color: "#0B192C",
@@ -291,7 +290,7 @@ export default function TimManajemen({
             backgroundColor: BLUE,
             borderRadius: "2px",
           }}></span>
-        </h3>
+        </h4>
         <p style={{
           fontSize: "clamp(12px, 3.5vw, 14px)",
           fontWeight: 700,

@@ -103,7 +103,6 @@ export default function HeroSection() {
               muted
               loop
               playsInline
-              preload={i === 0 ? "auto" : "metadata"}
               style={{
                 width: "100%",
                 height: "100%",
@@ -282,7 +281,7 @@ export default function HeroSection() {
 
       {/* ─── Dot indicators (bottom-center) ─── */}
       <div
-        className="absolute bottom-8 left-1/2 flex items-center gap-1"
+        className="absolute bottom-8 left-1/2 flex items-center gap-2"
         style={{ zIndex: 3, transform: "translateX(-50%)" }}
         aria-label="Slide indicators"
       >
@@ -292,28 +291,17 @@ export default function HeroSection() {
             id={`hero-dot-${i}`}
             aria-label={`Slide ${i + 1}`}
             onClick={() => goTo(i)}
+            className="rounded-full transition-all duration-300"
             style={{
-              minWidth: "32px",
-              minHeight: "32px",
-              padding: "12px 4px",
-              background: "transparent",
+              width: i === current ? "28px" : "8px",
+              height: "8px",
+              background:
+                i === current ? "#155DFC" : "rgba(255,255,255,0.40)",
               border: "none",
               cursor: "pointer",
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
+              padding: 0,
             }}
-          >
-            <span
-              className="rounded-full transition-all duration-300"
-              style={{
-                width: i === current ? "28px" : "8px",
-                height: "8px",
-                background: i === current ? "#155DFC" : "rgba(255,255,255,0.50)",
-                display: "block",
-              }}
-            />
-          </button>
+          />
         ))}
       </div>
 
