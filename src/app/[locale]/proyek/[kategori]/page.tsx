@@ -407,6 +407,7 @@ function ProjectCard({ project, accentColor }: { project: Project; accentColor: 
   const [hovered, setHovered] = useState(false);
   const locale = useLocale();
   const t = useTranslations("CategoryPage");
+  const projectUrl = `/${locale}/proyek/${project.category.toLowerCase()}/${project.slug}`;
 
   return (
     <div
@@ -422,7 +423,8 @@ function ProjectCard({ project, accentColor }: { project: Project; accentColor: 
         display: "flex", flexDirection: "column",
       }}
     >
-      <div style={{ position: "relative", height: "210px", overflow: "hidden" }}>
+      {/* Clickable Image Container */}
+      <a href={projectUrl} style={{ display: "block", position: "relative", height: "210px", overflow: "hidden", textDecoration: "none" }}>
         <img
           src={project.image} alt={project.title} loading="lazy"
           style={{
@@ -438,7 +440,7 @@ function ProjectCard({ project, accentColor }: { project: Project; accentColor: 
             : "linear-gradient(to top, rgba(0,0,0,0.22), transparent)",
           transition: "background 0.3s",
         }} />
-      </div>
+      </a>
 
       <div style={{ padding: "22px", flex: 1, display: "flex", flexDirection: "column" }}>
         <h3 style={{
@@ -446,7 +448,9 @@ function ProjectCard({ project, accentColor }: { project: Project; accentColor: 
           color: hovered ? accentColor : "#111827", marginBottom: "10px",
           transition: "color 0.2s",
         }}>
-          {project.title}
+          <a href={projectUrl} style={{ textDecoration: "none", color: "inherit" }}>
+            {project.title}
+          </a>
         </h3>
         <p style={{ fontSize: "14px", color: "#6B7280", lineHeight: "1.65", flex: 1, marginBottom: "16px" }}>
           {project.description}

@@ -439,6 +439,7 @@ function ProjectCard({
 }) {
   const locale = useLocale();
   const t = useTranslations("ProjectsSection");
+  const projectUrl = `/${locale}/proyek/${project.category.toLowerCase()}/${project.slug}`;
 
   const getCategoryFilterLabel = (cat: string) => {
     if (cat === "Semua") return t("filterAll");
@@ -452,6 +453,7 @@ function ProjectCard({
     <div
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onClick={() => { window.location.href = projectUrl; }}
       style={{
         backgroundColor: "#FFFFFF",
         borderRadius: "16px",
@@ -467,8 +469,8 @@ function ProjectCard({
         cursor: "pointer",
       }}
     >
-      {/* Image */}
-      <div style={{ position: "relative", overflow: "hidden", height: "220px" }}>
+      {/* Image Container with Link */}
+      <a href={projectUrl} style={{ position: "relative", overflow: "hidden", height: "220px", display: "block", textDecoration: "none" }}>
         <img
           src={project.image}
           alt={project.title}
@@ -524,7 +526,7 @@ function ProjectCard({
         }}>
           <Eye size={15} color={BLUE} />
         </div>
-      </div>
+      </a>
 
       {/* Body */}
       <div style={{ padding: "24px", flex: 1, display: "flex", flexDirection: "column" }}>
@@ -536,7 +538,9 @@ function ProjectCard({
           lineHeight: "1.3",
           transition: "color 0.2s",
         }}>
-          {project.title}
+          <a href={projectUrl} style={{ textDecoration: "none", color: "inherit" }}>
+            {project.title}
+          </a>
         </h3>
         <p style={{
           fontSize: "14px",
