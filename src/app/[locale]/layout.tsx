@@ -13,13 +13,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Divisi Infrastruktur--PT Modern Widya Tehnical",
+  title: "Divisi Infrastruktur — PT Modern Widya Tehnical",
   description:
     "PT Modern Widya Tehnical adalah perusahaan konstruksi nasional terpercaya dengan pengalaman lebih dari 40 tahun di bidang infrastruktur, gedung, dan industri.",
   keywords: ["konstruksi", "infrastruktur", "PT Modern Widya Tehnical", "MWT"],
   authors: [{ name: "PT Modern Widya Tehnical" }],
+  icons: {
+    icon: "/logo/Logo-02.png",
+    shortcut: "/logo/Logo-02.png",
+    apple: "/logo/Logo-02.png",
+  },
   openGraph: {
-    title: "Divisi Infrastruktur--PT Modern Widya Tehnical",
+    title: "Divisi Infrastruktur — PT Modern Widya Tehnical",
     description:
       "Membangun Indonesia dengan pengalaman dan kepercayaan selama lebih dari 40 tahun.",
     type: "website",
@@ -45,6 +50,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} className={inter.variable} data-scroll-behavior="smooth" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/logo/Logo-02.png" sizes="any" />
+        <link rel="apple-touch-icon" href="/logo/Logo-02.png" />
+      </head>
       <body style={{ fontFamily: "var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" }}>
         <NextIntlClientProvider messages={messages}>
           {children}
