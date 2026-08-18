@@ -454,7 +454,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a href={getLocalizedHref("/")} id="navbar-logo" style={{ display: "flex", alignItems: "center", flexShrink: 0, textDecoration: "none" }}>
-            <img src="/logo/lgwhite.png" alt="PT Modern Widya Tehnical" style={{ height: "42px", width: "auto", display: "block", objectFit: "contain" }} />
+            <img src="/logo/lgwhite.png" alt="PT Modern Widya Tehnical" fetchPriority="high" style={{ height: "42px", width: "auto", display: "block", objectFit: "contain" }} />
           </a>
 
           {/* ── Desktop nav ── */}
