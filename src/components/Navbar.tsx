@@ -207,9 +207,9 @@ function MobileDrawerContent({
         }}
       >
         <img
-          src="/logo/lgwhite.png"
-          alt="PT Modern Widya Tehnical"
-          style={{ height: "28px", width: "auto", flexShrink: 0 }}
+          src="/logo/Logo-02.png"
+          alt="Divisi Infrastruktur--PT Modern Widya Tehnical"
+          style={{ height: "36px", width: "auto", flexShrink: 0 }}
         />
         <span style={{
           color: "#FFFFFF",
@@ -219,7 +219,7 @@ function MobileDrawerContent({
           flex: 1,
           marginLeft: "8px"
         }}>
-          PT. Modern Widya Tehnical
+          Divisi Infrastruktur--PT Modern Widya Tehnical
         </span>
         <button
           onClick={onClose}
@@ -454,7 +454,7 @@ export default function Navbar() {
         >
           {/* Logo */}
           <a href={getLocalizedHref("/")} id="navbar-logo" style={{ display: "flex", alignItems: "center", flexShrink: 0, textDecoration: "none" }}>
-            <img src="/logo/lgwhite.png" alt="PT Modern Widya Tehnical" style={{ height: "42px", width: "auto", display: "block", objectFit: "contain" }} />
+            <img src="/logo/Logo-02.png" alt="Divisi Infrastruktur--PT Modern Widya Tehnical" style={{ height: "46px", width: "auto", display: "block", objectFit: "contain" }} />
           </a>
 
           {/* ── Desktop nav ── */}

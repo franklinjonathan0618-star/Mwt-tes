@@ -13,13 +13,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "PT Modern Widya Tehnical — Infrastruktur & Konstruksi",
+  title: "Divisi Infrastruktur--PT Modern Widya Tehnical",
   description:
     "PT Modern Widya Tehnical adalah perusahaan konstruksi nasional terpercaya dengan pengalaman lebih dari 40 tahun di bidang infrastruktur, gedung, dan industri.",
   keywords: ["konstruksi", "infrastruktur", "PT Modern Widya Tehnical", "MWT"],
   authors: [{ name: "PT Modern Widya Tehnical" }],
   openGraph: {
-    title: "PT Modern Widya Tehnical",
+    title: "Divisi Infrastruktur--PT Modern Widya Tehnical",
     description:
       "Membangun Indonesia dengan pengalaman dan kepercayaan selama lebih dari 40 tahun.",
     type: "website",
