@@ -2,8 +2,8 @@
 
 import React, { use, useState, useEffect } from "react";
 import { ArrowLeft, MapPin, Calendar, User, ChevronRight, Play } from "lucide-react";
-import { allProjects } from "@/lib/proyekData";
-import { useLocale } from "next-intl";
+import { allProjects, getLocalizedProject } from "@/lib/proyekData";
+import { useLocale, useTranslations } from "next-intl";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { notFound } from "next/navigation";
@@ -19,13 +19,16 @@ export default function DetailProyekPage({
     }, []);
 
     const locale = useLocale();
+    const t = useTranslations("ProjectDetail");
+    const tCat = useTranslations("CategoryPage");
     const { kategori, slug } = use(params);
 
-    const project = allProjects.find(
+    const rawProject = allProjects.find(
         (p) => p.category.toLowerCase() === kategori.toLowerCase() && p.slug === slug
     );
 
-    if (!project) return notFound();
+    if (!rawProject) return notFound();
+    const project = getLocalizedProject(rawProject, locale);
 
     // Build media list: video first (if any), then gallery images
     type MediaItem =
@@ -100,7 +103,7 @@ export default function DetailProyekPage({
                             transition: "opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s",
                         }}>
                             <h2 style={{ fontSize: "18px", fontWeight: 800, color: "#111827", marginBottom: "16px" }}>
-                                Detail Proyek
+                                {t("title")}
                             </h2>
 
                             <p style={{
@@ -117,15 +120,15 @@ export default function DetailProyekPage({
                             }}>
                                 <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "8px" }}>
                                     <MapPin size={13} color={project.categoryColor} />
-                                    <span>Lokasi: <strong style={{ color: "#111827" }}>{project.location}</strong></span>
+                                    <span>{t("location")}: <strong style={{ color: "#111827" }}>{project.location}</strong></span>
                                 </div>
                                 <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "8px" }}>
                                     <Calendar size={13} color={project.categoryColor} />
-                                    <span>Tahun: <strong style={{ color: "#111827" }}>{project.year}</strong></span>
+                                    <span>{t("year")}: <strong style={{ color: "#111827" }}>{project.year}</strong></span>
                                 </div>
                                 <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "8px" }}>
                                     <User size={13} color={project.categoryColor} />
-                                    <span>Klien: <strong style={{ color: "#111827" }}>{project.client}</strong></span>
+                                    <span>{t("client")}: <strong style={{ color: "#111827" }}>{project.client}</strong></span>
                                 </div>
                                 <div style={{
                                     marginTop: "12px", paddingTop: "12px",
@@ -148,7 +151,7 @@ export default function DetailProyekPage({
                                 onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.85"; }}
                                 onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
                             >
-                                Konsultasikan Proyek Ini
+                                {t("contactBtn")}
                             </a>
                         </div>
                     </div>
@@ -181,7 +184,7 @@ export default function DetailProyekPage({
                                 e.currentTarget.style.color = "#FFFFFF";
                             }}
                         >
-                            <ArrowLeft size={16} /> Kembali ke {project.categoryLabel}
+                            <ArrowLeft size={16} /> {tCat("allProjects")} ({project.categoryLabel})
                         </a>
                     </div>
                 </section>

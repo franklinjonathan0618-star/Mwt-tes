@@ -2,14 +2,12 @@
 
 import React, { use, useState, useRef, useEffect } from "react";
 import { MapPin, Calendar, ChevronRight, ArrowLeft, Layers, Play, Volume2, VolumeX } from "lucide-react";
-import { allProjects, categoryMeta } from "@/lib/proyekData";
-import { useLocale } from "next-intl";
+import { allProjects, getCategoryMeta, getLocalizedProject, Project } from "@/lib/proyekData";
+import { useLocale, useTranslations } from "next-intl";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RevealSection from "@/components/RevealSection";
 import { notFound } from "next/navigation";
-
-const BLUE = "#155DFC";
 
 export default function KategoriPage({ params }: { params: Promise<{ kategori: string }> }) {
   const [mounted, setMounted] = useState(false);
@@ -18,15 +16,17 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
   }, []);
 
   const locale = useLocale();
+  const t = useTranslations("CategoryPage");
   const { kategori } = use(params);
   const slug = kategori.toLowerCase();
-  const meta = categoryMeta[slug];
+  const meta = getCategoryMeta(slug, locale);
 
   if (!meta) return notFound();
 
-  const filteredProjects = allProjects.filter(
+  const rawFilteredProjects = allProjects.filter(
     (p) => p.category.toLowerCase() === slug
   );
+  const filteredProjects = rawFilteredProjects.map((p) => getLocalizedProject(p, locale));
 
   const ITEMS_PER_PAGE = 6;
   const [currentPage, setCurrentPage] = useState(1);
@@ -75,7 +75,7 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
                 color: "rgba(255,255,255,0.75)", fontSize: "14px", fontWeight: 500,
                 textDecoration: "none", marginBottom: "24px",
               }}>
-                <ArrowLeft size={14} /> Semua Proyek
+                <ArrowLeft size={14} /> {t("allProjects")}
               </a>
 
               <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
@@ -91,7 +91,7 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
                   fontSize: "11px", fontWeight: 700, letterSpacing: "2px",
                   textTransform: "uppercase", padding: "5px 14px", borderRadius: "999px",
                 }}>
-                  Kategori
+                  {t("categoryBadge")}
                 </span>
               </div>
 
@@ -115,7 +115,7 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
                 backgroundColor: "rgba(255,255,255,0.18)", color: "#FFFFFF",
                 fontSize: "14px", fontWeight: 700, padding: "8px 18px", borderRadius: "999px",
               }}>
-                {projects.length} Proyek
+                {t("projectsCount", { count: filteredProjects.length })}
               </span>
             </div>
 
@@ -138,9 +138,9 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
         {/* Breadcrumb */}
         <div style={{ backgroundColor: "#FFFFFF", borderBottom: "1px solid #E2E8F0", padding: "12px 24px" }}>
           <div style={{ maxWidth: "1400px", margin: "0 auto", display: "flex", gap: "8px", fontSize: "13px", color: "#9CA3AF", fontWeight: 500 }}>
-            <a href={`/${locale}`} style={{ color: "#9CA3AF", textDecoration: "none" }}>Beranda</a>
+            <a href={`/${locale}`} style={{ color: "#9CA3AF", textDecoration: "none" }}>{t("breadcrumbHome")}</a>
             <span>/</span>
-            <a href={`/${locale}/proyek`} style={{ color: "#9CA3AF", textDecoration: "none" }}>Proyek</a>
+            <a href={`/${locale}/proyek`} style={{ color: "#9CA3AF", textDecoration: "none" }}>{t("breadcrumbProjects")}</a>
             <span>/</span>
             <span style={{ color: meta.color, fontWeight: 700 }}>{isAMP ? "AMP" : meta.label}</span>
           </div>
@@ -152,10 +152,14 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
             <RevealSection variant="up">
               <div style={{ marginBottom: "40px" }}>
                 <h2 style={{ fontSize: "22px", fontWeight: 800, color: "#111827", marginBottom: "6px" }}>
-                  Proyek {isAMP ? "AMP" : meta.label}
+                  {t("projectsTitle", { category: isAMP ? "AMP" : meta.label })}
                 </h2>
                 <p style={{ fontSize: "14px", color: "#6B7280", fontWeight: 500 }}>
-                  Menampilkan {startIndex + 1} – {Math.min(startIndex + ITEMS_PER_PAGE, filteredProjects.length)} dari {filteredProjects.length} proyek
+                  {t("showingText", {
+                    start: startIndex + 1,
+                    end: Math.min(startIndex + ITEMS_PER_PAGE, filteredProjects.length),
+                    total: filteredProjects.length,
+                  })}
                 </p>
               </div>
             </RevealSection>
@@ -214,7 +218,7 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
                   }
                 }}
               >
-                Sebelumnya
+                {t("prevButton")}
               </button>
 
               {/* Page Numbers */}
@@ -287,14 +291,14 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
                   }
                 }}
               >
-                Berikutnya
+                {t("nextButton")}
               </button>
             </div>
           )}
 
           {filteredProjects.length === 0 && (
             <div style={{ textAlign: "center", padding: "80px 24px", color: "#9CA3AF" }}>
-              <p style={{ fontSize: "18px", fontWeight: 600 }}>Belum ada proyek di kategori ini.</p>
+              <p style={{ fontSize: "18px", fontWeight: 600 }}>{t("emptyState")}</p>
             </div>
           )}
         </section>
@@ -306,6 +310,7 @@ export default function KategoriPage({ params }: { params: Promise<{ kategori: s
 
 // ── Inline video component ────────────────────────────────────────────────────
 function AMPVideo({ color }: { color: string }) {
+  const t = useTranslations("CategoryPage");
   const videoRef = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
   const [playing, setPlaying] = useState(true);
@@ -356,7 +361,7 @@ function AMPVideo({ color }: { color: string }) {
         fontSize: "10px", fontWeight: 700, letterSpacing: "1.5px",
         textTransform: "uppercase", padding: "4px 10px", borderRadius: "999px",
       }}>
-        AMP · Periodik 2025
+        {t("videoBadge")}
       </div>
 
       {/* Controls bottom-right */}
@@ -398,9 +403,10 @@ function AMPVideo({ color }: { color: string }) {
 }
 
 // ── Project Card ──────────────────────────────────────────────────────────────
-function ProjectCard({ project, accentColor }: { project: typeof allProjects[0]; accentColor: string }) {
+function ProjectCard({ project, accentColor }: { project: Project; accentColor: string }) {
   const [hovered, setHovered] = useState(false);
   const locale = useLocale();
+  const t = useTranslations("CategoryPage");
 
   return (
     <div
@@ -447,7 +453,7 @@ function ProjectCard({ project, accentColor }: { project: typeof allProjects[0];
         </p>
 
         <div style={{ fontSize: "12px", color: "#9CA3AF", fontWeight: 500, marginBottom: "12px" }}>
-          Klien: <span style={{ color: "#374151", fontWeight: 600 }}>{project.client}</span>
+          {t("clientLabel")}: <span style={{ color: "#374151", fontWeight: 600 }}>{project.client}</span>
         </div>
 
         <div style={{
@@ -476,7 +482,7 @@ function ProjectCard({ project, accentColor }: { project: typeof allProjects[0];
             onMouseEnter={(e) => { e.currentTarget.style.opacity = "0.85"; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = "1"; }}
           >
-            Selengkapnya <ChevronRight size={13} />
+            {t("readMore")} <ChevronRight size={13} />
           </a>
         </div>
       </div>

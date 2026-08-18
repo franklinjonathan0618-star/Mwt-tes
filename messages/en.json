@@ -188,5 +188,27 @@
     "igBadge": "Project & Activity Documentation",
     "igTitle": "Latest Updates on Instagram",
     "igSubtitle": "Follow our social media accounts to get updates on physical construction documentation, corporate news, and the latest construction achievements."
+  },
+  "CategoryPage": {
+    "allProjects": "All Projects",
+    "categoryBadge": "Category",
+    "projectsCount": "{count} Projects",
+    "videoBadge": "AMP · Periodic 2025",
+    "breadcrumbHome": "Home",
+    "breadcrumbProjects": "Projects",
+    "showingText": "Showing {start} – {end} of {total} projects",
+    "projectsTitle": "{category} Projects",
+    "clientLabel": "Client",
+    "readMore": "Read More",
+    "prevButton": "Previous",
+    "nextButton": "Next",
+    "emptyState": "No projects found in this category."
+  },
+  "ProjectDetail": {
+    "title": "Project Details",
+    "location": "Location",
+    "year": "Year",
+    "client": "Client",
+    "contactBtn": "Contact Us For Collaboration"
   }
 }

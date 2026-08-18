@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight, MapPin, Calendar, ArrowRight, Eye } from "lucide-react";
-import { allProjects } from "@/lib/proyekData";
+import { allProjects, getLocalizedProject } from "@/lib/proyekData";
 import { useLocale, useTranslations } from "next-intl";
 import { useInView } from "@/hooks/useInView";
 
@@ -26,13 +26,13 @@ interface Project {
   image: string;
 }
 
-const projects = allProjects as unknown as Project[];
-
 const CATEGORIES: CategoryKey[] = ["Semua", "AMP", "Infrastruktur", "SDA"];
 
 export default function ProyekSection() {
   const locale = useLocale();
   const t = useTranslations("ProjectsSection");
+
+  const projects = allProjects.map((p) => getLocalizedProject(p, locale)) as unknown as Project[];
 
   const getCategoryFilterLabel = (cat: CategoryKey) => {
     if (cat === "Semua") return t("filterAll");

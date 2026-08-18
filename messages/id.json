@@ -161,5 +161,27 @@
     "igBadge": "Dokumentasi Proyek & Kegiatan",
     "igTitle": "Kabar Terbaru di Instagram",
     "igSubtitle": "Ikuti akun sosial media kami untuk mendapatkan update dokumentasi pembangunan fisik, berita perusahaan, dan pencapaian konstruksi terbaru."
+  },
+  "CategoryPage": {
+    "allProjects": "Semua Proyek",
+    "categoryBadge": "Kategori",
+    "projectsCount": "{count} Proyek",
+    "videoBadge": "AMP · Periodik 2025",
+    "breadcrumbHome": "Beranda",
+    "breadcrumbProjects": "Proyek",
+    "showingText": "Menampilkan {start} – {end} dari {total} proyek",
+    "projectsTitle": "Proyek {category}",
+    "clientLabel": "Klien",
+    "readMore": "Selengkapnya",
+    "prevButton": "Sebelumnya",
+    "nextButton": "Berikutnya",
+    "emptyState": "Belum ada proyek di kategori ini."
+  },
+  "ProjectDetail": {
+    "title": "Detail Proyek",
+    "location": "Lokasi",
+    "year": "Tahun",
+    "client": "Klien",
+    "contactBtn": "Hubungi Kami Untuk Kerjasama"
   }
 }
