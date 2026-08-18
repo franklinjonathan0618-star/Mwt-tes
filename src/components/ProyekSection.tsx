@@ -370,17 +370,29 @@ export default function ProyekSection() {
                 onClick={() => { goTo(i, i > safeIndex ? "right" : "left"); resetAuto(); }}
                 aria-label={`Slide ${i + 1}`}
                 style={{
-                  width: i === safeIndex ? "28px" : "8px",
-                  height: "8px",
-                  borderRadius: "999px",
+                  minWidth: "32px",
+                  minHeight: "32px",
+                  padding: "10px 4px",
                   border: "none",
-                  backgroundColor: i === safeIndex ? BLUE : "#CBD5E1",
-                  transition: "all 0.3s ease",
+                  backgroundColor: "transparent",
                   cursor: "pointer",
-                  padding: 0,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   outline: "none",
                 }}
-              />
+              >
+                <span
+                  style={{
+                    width: i === safeIndex ? "28px" : "8px",
+                    height: "8px",
+                    borderRadius: "999px",
+                    backgroundColor: i === safeIndex ? BLUE : "#CBD5E1",
+                    transition: "all 0.3s ease",
+                    display: "block",
+                  }}
+                />
+              </button>
             ))}
           </div>
         )}
